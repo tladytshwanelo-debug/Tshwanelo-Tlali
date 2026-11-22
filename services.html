@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>KINGDOM OF LESOTHO</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin: 10px;
+        }
+
+        header p {
+            font-size: 15px;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        nav a:hover {
+            background-color: #176b45;
+        }
+
+        .service-container {
+            width: 90%;
+            margin: 30px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .service-card {
+            background-color: white;
+            width: 250px;
+            margin: 15px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .service-card h2 {
+            color: #176b45;
+        }
+
+        .service-card p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .service-icon {
+            font-size: 35px;
+            color: #176b45;
+        }
+
+        .learn-more-btn {
+            display: inline-block;
+            background-color: #176b45;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .learn-more-btn:hover {
+            background-color: #104b30;
+            color: white;
+        }
+
+        button {
+            background-color: #176b45;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #104b30;
+        }
+
+        footer {
+            background-color: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Website Header -->
+
+    <header>
+
+        <h1>SERVICES OFFERED</h1>
+
+        <p>
+            Explore the specialized solutions we offer to help
+            your business grow, innovate and thrive.
+        </p>
+
+        <!-- Navigation Menu -->
+
+        <nav>
+
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <main class="service-container">
+
+
+
+        <article class="service-card">
+
+
+            <h2>Accommodations</h2>
+
+            <p>
+                We provide comfortable accommodation for tourists
+                and visitors. Our aim is to make every guest feel
+                welcome during their stay in Lesotho.
+            </p>
+
+            <a href="contact.html" class="learn-more-btn">
+                Learn More
+            </a>
+
+        </article>
+
+
+       
+
+        <article class="service-card">
+
+
+            <h2>Hospitality Services</h2>
+
+            <p>
+                Enjoy our dining experiences, food services
+                and event catering. We make sure our visitors
+                receive good hospitality and care.
+            </p>
+
+            <a href="contact.html" class="learn-more-btn">
+                Learn More
+            </a>
+
+        </article>
+
+
+        
+
+        <article class="service-card">
+
+
+            <h2>Fun Activities</h2>
+
+            <p>
+                We offer exciting outdoor activities,
+                recreational experiences and adventures
+                for families, friends and tourists.
+            </p>
+
+            <a href="contact.html" class="learn-more-btn">
+                Learn More
+            </a>
+
+        </article>
+
+
+
+        <article class="service-card">
+
+
+            <h2>Safety</h2>
+
+            <p>
+                We prioritize the safety of our visitors.
+                We encourage safe travelling and provide
+                helpful information to make your stay enjoyable.
+            </p>
+
+            <button type="button" onclick="sendMessage()">
+                Send Message
+            </button>
+
+        </article>
+
+    </main>
+
+
+
+    <footer>
+
+        <p>Visit Lesotho Tourism.</p>
+
+        <p>All rights reserved.</p>
+
+    </footer>
+
+
+    <script>
+
+       function sendMessage() {
+       alert("Thank you for visiting Kingdom of Lesotho! Please contact us for more information.");
+        window.location.href = "contact.html";
+     }
+
+
+    </script>
+
+</body>
+</html>
+

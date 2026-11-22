@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>KINGDOM OF LESOTHO</title>
+
+    <link rel="stylesheet" href="assets/style.css">
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .header {
+            background-color: royalblue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 25px;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: darkblue;
+        }
+
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url("Afriski Reserve.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 450px;
+            text-align: center;
+            color: white;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero h2 {
+            font-size: 30px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .container {
+            text-align: center;
+            margin: 25px;
+        }
+
+        .pager a {
+            background-color: royalblue;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        .pager a:hover {
+            background-color: darkblue;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: royalblue;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        button {
+            background-color: royalblue;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="header">
+
+        <header>
+
+            <h1>TOURIST ATTRACTION PLACES IN THE KINGDOM OF LESOTHO</h1>
+
+            <!-- Navigation Menu -->
+
+            <nav>
+
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+
+            </nav>
+
+        </header>
+
+    </div>
+
+    <main>
+
+        <section class="hero">
+
+            <h2>WELCOME TO THE KINGDOM IN THE SKY</h2>
+
+            <p>
+                Discover breathtaking alpine landscapes,
+                stunning waterfalls, beautiful mountain passes
+                and a rich cultural heritage in a country
+                completely surrounded by South Africa.
+            </p>
+
+            <div>
+
+                <button onclick="showWelcome()">
+                    Explore Lesotho
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <div class="container">
+
+        <ul class="pager">
+
+            <li>
+                <a href="about.html">Previous</a>
+                <a href="services.html">Next</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <div class="footer">
+
+        <footer>
+
+            <p>
+                Visit Lesotho Tourism.
+                <br>
+                All rights reserved.
+            </p>
+
+        </footer>
+
+    </div>
+
+    <script>
+
+        function showWelcome() {
+
+            alert("Welcome to the Kingdom of Lesotho! Enjoy exploring our beautiful country.");
+
+        }
+
+    </script>
+
+</body>
+</html>

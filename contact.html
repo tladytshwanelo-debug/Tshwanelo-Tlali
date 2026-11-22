@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KINGDOM OF LESOTHO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("bokong arabic accom.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            background-color: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #176b45;
+            color: white;
+            text-decoration: none;
+        }
+
+        form {
+            background-color: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        form h2 {
+            text-align: center;
+            color: #176b45;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #176b45;
+            color: white;
+            padding: 12px;
+            border: none;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #104b30;
+        }
+
+        footer {
+            background-color: #1a202c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 25px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Website Header -->
+    <header>
+
+        <h1>CONTACT US</h1>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+
+    </header>
+
+    <form id="myForm">
+
+        <h2>EXPLORE LESOTHO</h2>
+
+        <p style="text-align:center;">
+            Discover the beauty of the Mountain Kingdom
+        </p>
+
+        <label>First Name:</label>
+        <input type="text" id="fname" placeholder="Enter first name" required>
+
+        <label>Last Name:</label>
+        <input type="text" id="lname" placeholder="Enter last name" required>
+
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="Enter email address" required>
+
+        <label>Password:</label>
+        <input type="password" id="pwd" placeholder="Create password" required>
+
+        <label>Confirm Password:</label>
+        <input type="password" id="cpwd" placeholder="Confirm password" required>
+
+        <label>Location:</label>
+        <input type="text" id="location" placeholder="Enter your location" required>
+
+        <label>Phone Number:</label>
+        <input type="tel" id="phone" placeholder="Enter phone number" required>
+
+        <label>Gender:</label>
+
+        <p>
+            <input type="radio" name="gender" value="Male" required> Male
+        </p>
+
+        <p>
+            <input type="radio" name="gender" value="Female"> Female
+        </p>
+
+        <p>
+            <input type="radio" name="gender" value="Others"> Others
+        </p>
+
+        <label>Review of your stay in Lesotho:</label>
+
+        <textarea id="lsreview" placeholder="Write your review here..." required></textarea>
+
+        <p style="margin-top:15px;">
+            <input type="checkbox" id="remember">
+            Remember Lesotho
+        </p>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+
+    <footer>
+
+        <p>Visit Lesotho Tourism.</p>
+        <p>All rights reserved.</p>
+
+    </footer>
+
+
+    <script>
+
+// 1. Find the form on the page
+const form = document.getElementById("myForm");
+
+// 2. Check if an email was saved earlier ("Remember Me")
+const savedEmail = localStorage.getItem("userEmail");
+if (savedEmail) {
+  document.getElementById("email").value = savedEmail;
+  document.getElementById("rememberMe").checked = true;
+}
+
+// 3. Run this code when the user clicks "Submit"
+form.addEventListener("submit", function (event) {
+  // Stop the page from refreshing
+  event.preventDefault();
+
+  // Get the values typed into the boxes
+  const firstName = document.getElementById("firstName").value;
+  const lastName = document.getElementById("lastName").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirmPassword").value;
+  const location = document.getElementById("location").value;
+  const phone = document.getElementById("phone").value;
+  const bio = document.getElementById("bio").value;
+  const rememberMe = document.getElementById("rememberMe").checked;
+
+  // Get the selected radio button for gender
+  const selectedGender = document.querySelector('input[name="gender"]:checked');
+
+  // --- SIMPLE CHECKS ---
+
+  if (firstName === "" || lastName === "") {
+    alert("Please enter your first and last name.");
+    return; // Stop here if there is an error
+  }
+
+  if (email === "") {
+    alert("Please enter your email.");
+    return;
+  }
+
+  if (password.length < 6) {
+    alert("Password must be at least 6 characters.");
+    return;
+  }
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match!");
+    return;
+  }
+
+  if (location === "" || phone === "") {
+    alert("Please enter your location and phone number.");
+    return;
+  }
+
+  if (!selectedGender) {
+    alert("Please select a gender.");
+    return;
+  }
+
+  // --- REMEMBER ME ---
+
+  if (rememberMe === true) {
+    localStorage.setItem("userEmail", email); // Save email
+  } else {
+    localStorage.removeItem("userEmail"); // Forget email
+  }
+
+  // --- SUCCESS ---
+
+  alert("Form submitted! Welcome, " + firstName + "!");
+  console.log({
+    firstName,
+    lastName,
+    email,
+    location,
+    phone,
+    gender: selectedGender.value,
+    bio,
+    rememberMe
+  });
+});
+    </script>
+
+</body>
+</html>
